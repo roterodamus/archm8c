@@ -35,9 +35,16 @@ fi
 # Download m8c using yay
 yay -S --noconfirm m8c
 
+# Copy the config file to ~/.config/i3/
+mkdir -p ~/.config/i3
+cp config ~/.config/i3/
+
 # Clean up by removing the yay directory
 cd .. || exit
 rm -rf yay
 
-echo "Script completed successfully!"
+# Restart the computer
+echo "Restarting the computer..."
+sudo reboot
 
+echo "Script completed successfully!"
