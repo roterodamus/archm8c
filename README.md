@@ -13,7 +13,7 @@ This script is designed for use on an Arch Linux system with the following requi
 - i3 Window Manager
 - Git
 
-It is highly recommended to install Arch Linux using the `archinstall` script for simplicity.
+Install Arch Linux using the `archinstall` script for simplicity.
 
 ## Installation Instructions
 
