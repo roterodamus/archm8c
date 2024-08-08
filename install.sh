@@ -8,7 +8,7 @@ cp config ~/.config/i3/
 sudo pacman -Syu --noconfirm
 
 # Install git
-sudo pacman -S --noconfirm git qpwgraph pavucontrol
+sudo pacman -S --noconfirm git qpwgraph pavucontrol unclutter
 
 # Clone the yay repository
 git clone http://aur.archlinux.org/yay.git
