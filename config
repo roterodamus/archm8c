@@ -177,6 +177,7 @@ for_window [class="^.*"] border pixel 0
 exec --no-startup-id m8c
 #exec --no-startup-id pavucontrol
 exec --no-startup-id unclutter
+exec --no-startup-id qpwgraph -m
 
 #bindsym $mod+Left workspace prev
 #bindsym $mod+Right workspace next
@@ -184,7 +185,7 @@ exec --no-startup-id unclutter
 
 for_window [class="antimicrox"] move workspace number 2
 for_window [class="Pavucontrol"] move workspace number 3
-for_window [class="dconf-editor"] move workspace number 8
+for_window [class="qpwgraph"] move workspace number 4
 
 bindsym $mod+F12 exec --no-startup-id systemctl poweroff
 
