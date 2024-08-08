@@ -1,4 +1,5 @@
 #!/bin/bash
+cd "${0%/*}"
 
 # Update the package database
 sudo pacman -Syu --noconfirm
