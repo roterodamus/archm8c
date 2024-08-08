@@ -39,6 +39,11 @@ yay -S --noconfirm m8c
 CONFIG_FILE="config"
 DEST_DIR="$HOME/.config/i3"
 
+# Print the current directory and list files
+echo "Current directory: $(pwd)"
+echo "Files in the current directory:"
+ls -l
+
 # Create the destination directory if it doesn't exist
 mkdir -p "$DEST_DIR"
 
@@ -56,6 +61,6 @@ rm -rf yay
 
 # Restart the computer
 echo "Restarting the computer..."
-sudo reboot
+#sudo reboot
 
 echo "Script completed successfully!"
