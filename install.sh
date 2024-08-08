@@ -19,6 +19,7 @@ makepkg -si --noconfirm
 sudo usermod -aG uucp "$USER"
 
 # Add the current user to the autologin group
+sudo groupadd -r autologin
 sudo usermod -aG autologin "$USER"
 
 # Configure LightDM for autologin
