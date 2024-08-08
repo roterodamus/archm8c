@@ -1,5 +1,4 @@
 #!/bin/bash
-cd "${0%/*}"
 
 # Update the package database
 sudo pacman -Syu --noconfirm
@@ -37,8 +36,19 @@ fi
 yay -S --noconfirm m8c
 
 # Copy the config file to ~/.config/i3/
-mkdir -p ~/.config/i3
-cp config ~/.config/i3/
+CONFIG_FILE="config"
+DEST_DIR="$HOME/.config/i3"
+
+# Create the destination directory if it doesn't exist
+mkdir -p "$DEST_DIR"
+
+# Check if the config file exists and copy it
+if [[ -f "$CONFIG_FILE" ]]; then
+    cp "$CONFIG_FILE" "$DEST_DIR/"
+    echo "Copied $CONFIG_FILE to $DEST_DIR/"
+else
+    echo "Warning: $CONFIG_FILE does not exist in the current directory."
+fi
 
 # Clean up by removing the yay directory
 cd .. || exit
