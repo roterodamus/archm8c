@@ -7,10 +7,11 @@ This repository contains a straightforward Bash script that transforms your PC i
 This script is designed for use on an Arch Linux system with the following requirements:
 
 - An active internet connection
+- A user account with sudo privileges
 - GRUB bootloader
 - LightDM display manager
 - i3 Window Manager
-- A user account with sudo privileges
+- Git
 
 It is highly recommended to install Arch Linux using the `archinstall` script for simplicity.
 
@@ -36,4 +37,12 @@ It is highly recommended to install Arch Linux using the `archinstall` script fo
    ```bash
    ./install.sh
    ```
+
+## A very special thanks to:
+
+- Trash80 - [Dirtywave](https://dirtywave.com/)
+- [M8C](https://github.com/laamaa/m8c)
+- and the entire FOSS Linux community.
+
+   
 
