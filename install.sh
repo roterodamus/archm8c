@@ -1,13 +1,15 @@
 #!/bin/bash
 
-# Copy the config file to ~/.config/i3/
+# Copy the config files
 mkdir -p ~/.config/i3
 cp config ~/.config/i3/
 
-# Update the package database
+mkdir -p ~/.local/share/m8c
+cp config.ini ~/.local/share/m8c/
+
+# Update the package database & Install git
 sudo pacman -Syu --noconfirm
 
-# Install git
 sudo pacman -S --noconfirm git qpwgraph pavucontrol unclutter
 
 # Clone the yay repository
