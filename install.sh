@@ -36,6 +36,18 @@ if ! grep -q "autologin-user=$USER" "$LIGHTDM_CONF"; then
     sudo bash -c "echo 'autologin-user-timeout=0' >> $LIGHTDM_CONF"
 fi
 
+# Change GRUB timeout to 0
+GRUB_CONF="/etc/default/grub"
+
+if grep -q "^GRUB_TIMEOUT=" "$GRUB_CONF"; then
+    sudo sed -i 's/^GRUB_TIMEOUT=.*/GRUB_TIMEOUT=0/' "$GRUB_CONF"
+else
+    echo "GRUB_TIMEOUT=0" | sudo tee -a "$GRUB_CONF"
+fi
+
+# Update GRUB configuration
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
 # Download m8c using yay
 yay -S --noconfirm m8c
 
