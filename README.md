@@ -4,7 +4,7 @@ This repository contains a straightforward Bash script that transforms your PC i
 
 ## Prerequisites
 
-This script is designed for use on an Arch Linux system with the following requirements:
+This script is designed for use on a fresh Arch Linux system with the following requirements:
 
 - An active internet connection
 - A user account with sudo privileges
