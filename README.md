@@ -15,6 +15,20 @@ This script is designed for use on a fresh Arch Linux system with the following 
 
 Install Arch Linux using the `archinstall` script for simplicity.
 
+Or use archinstall with the following config file. 
+
+   ```bash
+   archinstall --config https://dpaste.com/8AWVXMAKC.txt
+   ```
+>1. Select your local mirror location.
+>2. Enter disk configuration, use best effort on your desired drive
+>3. make a user account with sudo privileges
+>4. Select your timezone
+>5. Install
+
+> <sub> dpaste available untill 09-Aug-25 </sub>
+
+
 ## Installation Instructions
 
 
