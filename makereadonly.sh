@@ -11,15 +11,20 @@ cp /etc/fstab /etc/fstab.bak
 echo "Backup of /etc/fstab created at /etc/fstab.bak"
 
 # Get the UUID of the root filesystem
-ROOT_UUID=$(blkid -s UUID -o value /)
+ROOT_UUID=$(blkid -s UUID -o value)
 if [ -z "$ROOT_UUID" ]; then
     echo "Could not find UUID for the root filesystem."
     exit 1
 fi
 
 # Modify /etc/fstab to mount root as read-only
-sed -i "s|^UUID=$ROOT_UUID .*|UUID=$ROOT_UUID / ext4 ro,noatime 0 1|" /etc/fstab
-echo "Updated /etc/fstab to mount root as read-only."
+if grep -q "UUID=$ROOT_UUID" /etc/fstab; then
+    sed -i "s|^UUID=$ROOT_UUID .*|UUID=$ROOT_UUID / ext4 ro,noatime 0 1|" /etc/fstab
+    echo "Updated /etc/fstab to mount root as read-only."
+else
+    echo "UUID=$ROOT_UUID / ext4 ro,noatime 0 1" >> /etc/fstab
+    echo "Added entry to /etc/fstab to mount root as read-only."
+fi
 
 # Create remount scripts
 cat << 'EOF' > /usr/local/bin/remount_rw.sh
