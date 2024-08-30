@@ -10,7 +10,7 @@ cp config.ini ~/.local/share/m8c/
 # Update the package database & Install git
 sudo pacman -Syu --noconfirm
 
-sudo pacman -S --noconfirm git qpwgraph pavucontrol unclutter
+sudo pacman -S --noconfirm git qpwgraph pavucontrol unclutter xorg-xrandr antimicrox
 
 # Clone the yay repository
 git clone http://aur.archlinux.org/yay.git
