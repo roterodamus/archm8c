@@ -10,7 +10,7 @@ cp config.ini ~/.local/share/m8c/
 # Update the package database & Install git
 sudo pacman -Syu --noconfirm
 
-sudo pacman -S --noconfirm git qpwgraph pavucontrol unclutter xorg-xrandr antimicrox
+sudo pacman -S --noconfirm git qpwgraph pavucontrol unclutter xorg-xrandr antimicrox bluez bluez-utils blueberry
 
 # Clone the yay repository
 git clone http://aur.archlinux.org/yay.git
@@ -51,7 +51,7 @@ fi
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 # Download m8c using yay
-yay -S --noconfirm m8c
+yay -S --noconfirm m8c xpadneo-dkms
 
 # Restart the computer
 echo "Restarting the computer..."
