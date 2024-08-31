@@ -177,6 +177,7 @@ bindsym $mod+F12 exec --no-startup-id systemctl poweroff
 exec --no-startup-id m8c
 exec --no-startup-id unclutter
 exec --no-startup-id qpwgraph -m
+exec --no-startup-id blueberry-tray
 
 for_window [class="antimicrox"] move workspace number 2
 for_window [class="Pavucontrol"] move workspace number 3
@@ -187,7 +188,7 @@ for_window [class="qpwgraph"] move workspace number 4
 #bindsym $mod+Right workspace next
 
 #exec --no-startup-id pavucontrol
-#exec --no-startup-id xrandr -o normal
+#exec --no-startup-id xrandr -o right
 #exec --no-startup-id antimicrox --hidden defaultsz.gamecontroller
 
 
