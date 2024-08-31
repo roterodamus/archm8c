@@ -12,6 +12,7 @@ sudo pacman -Syu --noconfirm
 
 sudo pacman -S --noconfirm git qpwgraph pavucontrol unclutter xorg-xrandr antimicrox bluez bluez-utils blueberry
 
+sudo systemctl enable bluetooth
 # Clone the yay repository
 git clone http://aur.archlinux.org/yay.git
 
