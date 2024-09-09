@@ -10,7 +10,7 @@ cp config.ini ~/.local/share/m8c/
 # Update the package database & Install git
 sudo pacman -Syu --noconfirm
 
-sudo pacman -S --noconfirm git qpwgraph pavucontrol unclutter xorg-xrandr antimicrox bluez bluez-utils blueberry linux-rt linux-rt-headers
+sudo pacman -S --noconfirm git qpwgraph pavucontrol unclutter xorg-xrandr antimicrox bluez bluez-utils blueberry linux-rt linux-rt-headers rtkit realtime-privileges
 
 sudo systemctl enable bluetooth
 # Clone the yay repository
@@ -28,6 +28,8 @@ sudo usermod -aG uucp "$USER"
 # Add the current user to the autologin group
 sudo groupadd -r autologin
 sudo usermod -aG autologin "$USER"
+sudo usermod -aG realtime "$USER"
+sudo usermod -aG audio "$USER"
 
 # Configure LightDM for autologin
 LIGHTDM_CONF="/etc/lightdm/lightdm.conf"
