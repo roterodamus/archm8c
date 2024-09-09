@@ -22,14 +22,12 @@ cd yay || { echo "Failed to enter yay directory"; exit 1; }
 # Build and install yay
 makepkg -si --noconfirm
 
-# Add the current user to the uucp group
-sudo usermod -aG uucp "$USER"
-
-# Add the current user to the autologin group
+# Add the current user to the groups
 sudo groupadd -r autologin
 sudo usermod -aG autologin "$USER"
 sudo usermod -aG realtime "$USER"
 sudo usermod -aG audio "$USER"
+sudo usermod -aG uucp "$USER"
 
 # Configure LightDM for autologin
 LIGHTDM_CONF="/etc/lightdm/lightdm.conf"
