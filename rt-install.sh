@@ -7,6 +7,9 @@ cp config ~/.config/i3/
 mkdir -p ~/.local/share/m8c
 cp config.ini ~/.local/share/m8c/
 
+mkdir -p ~/.config/pipewire
+cp pipewire.conf ~/.config/pipewire/
+
 # Update the package database & Install git
 sudo pacman -Syu --noconfirm
 
